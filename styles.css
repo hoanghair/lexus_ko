@@ -219,11 +219,12 @@ table {
 /* <!-- Header --> */
 .header {
   display: flex;
+  position: absolute;
   height: 75px;
   width: 100%;
   padding: 0 3vw;
   align-items: center;
-  border: 1px solid #ccc;
+  /* border: 1px solid #ccc; */
   box-sizing: border-box;
 }
 
@@ -251,20 +252,18 @@ table {
   justify-content: space-between;
   align-items: center;
 }
-
-.header__menu-list {
+.header__menu {
+  padding-left: 80px;
+}
+.list__menu {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 75px;
 }
 
-.header__menu {
-  padding-left: 80px;
-}
-
-.header__menu-item {
-  padding: 28px 28px;
+.list__menu-item {
+  padding: 9px 15px;
   cursor: pointer;
   font-size: 15px;
   font-weight: 600;
@@ -281,9 +280,134 @@ table {
   display: flex;
   text-transform: uppercase;
 }
-.header__quickmenu-item  a{
+.header__quickmenu-item{
   color: var(--txt-black);
   padding: 10px 15px;
-
 }
+
+
+/* Menu 3 level */
+/* — Set up main naviagtion —- */
+.list__menu {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.list__menu1,.list__menu2,.list__menu3{
+  display: none;
+}
+
+/* .list__menu .list__menu-item, .list__menu1 .menu1__item, .list__menu2 .menu2__item, .list__menu3 .menu3__item{
+  float: left;
+  position: relative;
+} */
+.list__menu1 .menu1__item, .list__menu2 .menu2__item, .list__menu3 .menu3__item{
+  color: #fff;
+  position: relative;
+}
+.list__menu .list__menu-item{
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+.list__menu .list__menu-item:hover{
+  opacity: 1;
+}
+.list__menu .list__menu-item:hover::before{
+  content: '';
+  cursor: auto;
+  position: absolute;
+  background-color: transparent;
+  top: 55px;
+  width: 50px;
+  height: 30px;
+}
+.list__menu:hover .list__menu-item:not(:hover){
+  opacity: 0.4;
+}
+
+/* —– Level 1 —-*/
+/* .list__menu1 .menu1__item{
+  position: absolute;
+  width: 200px;
+  height: 500px;
+} */
+.list__menu li:hover .list__menu1 {
+  display: block;
+  position: absolute;
+  width: 317px;
+  left: -1px;
+  top: 63px;
+  background-color: #000000;
+  margin-top: 10px;
+  animation: animationNav 0.4s forwards;
+}
+.list__menu li:hover .list__menu1::before {
+  content: '';
+  position: absolute;
+  cursor: auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.list__menu li:hover .list__menu1 li {
+  float: none;
+  padding: 10px 0;
+}
+
+.list__menu li:hover .list__menu1 li:hover {
+  background-color: #999999;
+  position: relative;
+}
+
+.list__menu li:hover .list__menu1 li{
+  background-color: transparent;
+}
+
+/* —– Level 2 —-*/
+.list__menu li:hover .list__menu1 li .list__menu2 {
+  display: none;
+}
+
+.list__menu li:hover .list__menu1 li:hover .list__menu2 {
+  display: block;
+  position: absolute;
+  left: 100px;
+  width: 100%;
+  top: 0;
+  background-color: #000;
+}
+
+/* —– Level 3 —-*/
+.list__menu li:hover .list__menu1 li .list__menu2 li .list__menu3 {
+  display: none !important;
+}
+
+.list__menu li:hover .list__menu1 li .list__menu2 li:hover .list__menu3 {
+  display: block !important;
+  position: absolute;
+  left: 100px;
+  width: 100%;
+  top: 0;
+  background-color: #000;
+}
+/* // Menu 3 level */
 /* <!-- //Header --> */
+
+
+
+
+/* Animation */
+@keyframes animationNav {
+  0% {
+    transform: translateX(-317px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* //Animation */
