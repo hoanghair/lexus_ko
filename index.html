@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>LEXUS</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
@@ -25,45 +25,122 @@
             <li data-id="#brand" class="header__menu-item">brand</li>
           </ul>
           <div class="list__item-child">
-            <div id="#model" class="item__child item__child-model off">
-              <ul>
-                <li>LS</li>
-                <li>ES</li>
-                <li>RX</li>
-                <li>RZ</li>
-                <li>NX</li>
-                <li>UX</li>
-                <li>LC</li>
-                <li>FUTURE</li>
+            <div id="#model" class="item__child item__child-model is_show">
+              <ul class="item__child-list">
+                <li data-id="#ls">LS</li>
+                <li data-id="#es">ES</li>
+                <li data-id="#rx">RX</li>
+                <li data-id="#rz">RZ</li>
+                <li data-id="#nx">NX</li>
+                <li data-id="#ux">UX</li>
+                <li data-id="#lc">LC</li>
+                <li data-id="#future">FUTURE</li>
               </ul>
+              <div class="child__lvtwo">
+                <div id="#ls" class="item__child child__lvtwo-item child__lvtwo-ls off">
+                  <ul>
+                    <li>LS 500h</li>
+                    <li>LS 500</li>
+                  </ul>
+                </div>
+                <div id="#es" class="item__child child__lvtwo-item child__lvtwo-es off">
+                  <ul>
+                    <li>ES 300h</li>
+                    <li>ES 300h F SPORT</li>
+                  </ul>
+                </div>
+                <div id="#rx" class="item__child child__lvtwo-item child__lvtwo-rx off">
+                  <ul>
+                    <li>RX 350h</li>
+                    <li>RX 450h+</li>
+                    <li>RX 500h</li>
+                  </ul>
+                </div>
+                <div id="#rz" class="item__child child__lvtwo-item child__lvtwo-rz off">
+                  <ul>
+                    <li>RZ 450e</li>
+                  </ul>
+                </div>
+                <div id="#nx" class="item__child child__lvtwo-item child__lvtwo-nx off">
+                  <ul>
+                    <li>NX 350h</li>
+                    <li>NX 450h+</li>
+                    <li>NX 450h+ F SPORT</li>
+                  </ul>
+                </div>
+                <div id="#ux" class="item__child child__lvtwo-item child__lvtwo-ux off">
+                  <ul>
+                    <li>UX 250h 2WD</li>
+                    <li>UX 250h AWD</li>
+                    <li>UX 250h F SPORT</li>
+                  </ul>
+                </div>
+                <div id="#lc" class="item__child child__lvtwo-item child__lvtwo-lc off">
+                  <ul>
+                    <li>LC 500h</li>
+                    <li>LC 500</li>
+                    <li>LC 500 CONVERTIBLE</li>
+                  </ul>
+                </div>
+                <div id="#future" class="item__child child__lvtwo-item child__lvtwo-future off">
+                  <ul>
+                    <li>LF-Z Electrified</li>
+                    <li>LF-30 Electrified</li>
+                    <li>LF-1 Limitless</li>
+                    <li>LS+</li>
+                    <li>LF-FC</li>
+                    <li>LF-SA</li>
+                    <li>LF-C2</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div id="#buy" class="item__child item__child-buy off">
-              <ul>
-                <li>견적 조회</li>
-                <li>차량 비교</li>
-                <li>구매 혜택</li>
+              <ul class="item__child-list">
+                <li><span>견적 조회</span></li>
+                <li><span>차량 비교</span></li>
+                <li data-id="#benefit"><span>구매 혜택</span></li>
               </ul>
+              <div class="child__lvtwo">
+                <div id="#benefit" class="item__child child__lvtwo-item child__lvtwo-benefit off">
+                  <ul>
+                    <li>저금리 구매혜택</li>
+                    <li>이 달의 구매혜택</li>
+                    <li>어메이징 스위치</li>
+                    <li>밸류플러스</li>
+                    <li>하이브리드 구매혜택</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div id="#servic" class="item__child item__child-servic off">
               <ul>
-                <li>렉서스 서비스</li>
-                <li>서비스 프로그램</li>
-                <li>하이브리드 서비스</li>
-                <li>서비스센터</li>
-                <li>사용자 매뉴얼</li>
-                <li>액세서리</li>
-                <li>부품 및 취급 정보</li>
-                <li>서비스자료·장비·교육</li>
-                <li>24시간 서비스 예약</li>
+                <li><span>렉서스 서비스</span></li>
+                <li><span>서비스 프로그램</span></li>
+                <li><span>하이브리드 서비스</span></li>
+                <li><span>서비스센터</span></li>
+                <li><span>사용자 매뉴얼</span></li>
+                <li><span>액세서리</span></li>
+                <li><span>부품 및 취급 정보</span></li>
+                <li><span>서비스자료·장비·교육</span></li>
+                <li><span>24시간 서비스 예약</span></li>
               </ul>
             </div>
             <div id="#brand" class="item__child item__child-brand off">
               <ul>
-                <li>ABOUT LEXUS</li>
-                <li>BRAND STORY</li>
-                <li>LEXUS DESIGN AWARD</li>
-                <li>LEXUS CREATIVE MASTERS</li>
-                <li>LEXUS META CITY</li>
+                <li><span>ABOUT LEXUS</span></li>
+                <li><span>BRAND STORY</span></li>
+                <li><span>LEXUS DESIGN AWARD</span></li>
+                <li><span>LEXUS CREATIVE MASTERS</span></li>
+                <li><span>LEXUS META <br>CITY</span></li>
+              </ul>
+            </div>
+            <div class="utils__submenu">
+              <ul class="utils__submenu-list">
+                <li class="utils__submenu-item"><a href="#">시승신청</a></li>
+                <li class="utils__submenu-item"><a href="#">전시장 찾기</a></li>
+                <li class="utils__submenu-item"><a href="#">공식인증중고차</a></li>
+                <li class="utils__submenu-item"><a href="#">오토케어리스</a></li>
               </ul>
             </div>
           </div>
