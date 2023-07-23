@@ -14,18 +14,20 @@
     <!-- Header -->
     <header class="header">
       <h1 class="header__logo">
-        <img class="header__logo-img" src="img/img_logo.png" alt="">
+        <a class="header__logo-link" href="">
+          <img class="header__logo-img" src="img/img_logo.png" alt="">
+        </a>
       </h1>
       <div class="header__wrap">
         <div class="header__menu">
           <ul class="header__menu-list">
-            <li data-id="#model" class="header__menu-item">model</li>
-            <li data-id="#buy" class="header__menu-item">buy</li>
-            <li data-id="#servic" class="header__menu-item">servic</li>
-            <li data-id="#brand" class="header__menu-item">brand</li>
+            <li data-id="#model" class="header__menu-item on">model</li>
+            <li data-id="#buy" class="header__menu-item on">buy</li>
+            <li data-id="#servic" class="header__menu-item on">servic</li>
+            <li data-id="#brand" class="header__menu-item on">brand</li>
           </ul>
-          <div class="list__item-child">
-            <div id="#model" class="item__child item__child-model is_show">
+          <div class="header__menu-child">
+            <div id="#model" class="item__child item__child--model off">
               <ul class="item__child-list">
                 <li data-id="#ls">LS</li>
                 <li data-id="#es">ES</li>
@@ -36,11 +38,11 @@
                 <li data-id="#lc">LC</li>
                 <li data-id="#future">FUTURE</li>
               </ul>
-              <div class="child__lvtwo">
+              <div class="child__lvtwo off">
                 <div id="#ls" class="item__child child__lvtwo-item child__lvtwo-ls off">
                   <ul>
-                    <li>LS 500h</li>
-                    <li>LS 500</li>
+                    <li><span>LS 500h</span></li>
+                    <li><span>LS 500</span></li>
                   </ul>
                 </div>
                 <div id="#es" class="item__child child__lvtwo-item child__lvtwo-es off">
@@ -79,7 +81,7 @@
                   <ul>
                     <li>LC 500h</li>
                     <li>LC 500</li>
-                    <li>LC 500 CONVERTIBLE</li>
+                    <li>LC 500 <br>CONVERTIBLE</li>
                   </ul>
                 </div>
                 <div id="#future" class="item__child child__lvtwo-item child__lvtwo-future off">
@@ -95,13 +97,13 @@
                 </div>
               </div>
             </div>
-            <div id="#buy" class="item__child item__child-buy off">
+            <div id="#buy" class="item__child item__child--buy off">
               <ul class="item__child-list">
                 <li><span>견적 조회</span></li>
                 <li><span>차량 비교</span></li>
                 <li data-id="#benefit"><span>구매 혜택</span></li>
               </ul>
-              <div class="child__lvtwo">
+              <div class="child__lvtwo off">
                 <div id="#benefit" class="item__child child__lvtwo-item child__lvtwo-benefit off">
                   <ul>
                     <li>저금리 구매혜택</li>
@@ -113,27 +115,80 @@
                 </div>
               </div>
             </div>
-            <div id="#servic" class="item__child item__child-servic off">
-              <ul>
+            <div id="#servic" class="item__child item__child--servic off">
+              <ul class="item__child-list">
                 <li><span>렉서스 서비스</span></li>
-                <li><span>서비스 프로그램</span></li>
+                <li data-id="#service"><span>서비스 프로그램</span></li>
                 <li><span>하이브리드 서비스</span></li>
                 <li><span>서비스센터</span></li>
                 <li><span>사용자 매뉴얼</span></li>
-                <li><span>액세서리</span></li>
+                <li data-id="#accessory"><span>액세서리</span></li>
                 <li><span>부품 및 취급 정보</span></li>
                 <li><span>서비스자료·장비·교육</span></li>
                 <li><span>24시간 서비스 예약</span></li>
               </ul>
+              <div class="child__lvtwo off">
+                <div id="#service" class="item__child child__lvtwo-item child__lvtwo-service off">
+                  <ul>
+                    <li>무상 차량 관리 서비스</li>
+                    <li>렉서스 PMS 패키지</li>
+                    <li>보증 프로그램</li>
+                    <li>연장 보증 프로그램</li>
+                    <li>렉서스 중고차 무상점검 <br>서비스</li>
+                    <li>렉서스 홈 투 홈 서비스</li>
+                    <li>긴급 출동 서비스</li>
+                    <li>충전서비스</li>
+                    <li>제작 결함 시정조치</li>
+                  </ul>
+                </div>
+                <div id="#accessory" class="item__child child__lvtwo-item child__lvtwo-accessory off">
+                  <ul>
+                    <li>NX 액세서리</li>
+                    <li>RX 액세서리</li>
+                    <li>ES 액세서리</li>
+                  </ul>
+                </div>
+              </div>
             </div>
-            <div id="#brand" class="item__child item__child-brand off">
-              <ul>
-                <li><span>ABOUT LEXUS</span></li>
-                <li><span>BRAND STORY</span></li>
-                <li><span>LEXUS DESIGN AWARD</span></li>
-                <li><span>LEXUS CREATIVE MASTERS</span></li>
+            <div id="#brand" class="item__child item__child--brand off">
+              <ul class="item__child-list">
+                <li data-id="#about"><span>ABOUT LEXUS</span></li>
+                <li data-id="#story"><span>BRAND STORY</span></li>
+                <li data-id="#design"><span>LEXUS DESIGN AWARD</span></li>
+                <li data-id="#creative"><span>LEXUS CREATIVE MASTERS</span></li>
                 <li><span>LEXUS META <br>CITY</span></li>
               </ul>
+              <div class="child__lvtwo off">
+                <div id="#about" class="item__child child__lvtwo-item child__lvtwo-about off">
+                  <ul>
+                    <li>연혁</li>
+                    <li>사회공헌</li>
+                    <li>T-TEP 프로그램</li>
+                  </ul>
+                </div>
+                <div id="#story" class="item__child child__lvtwo-item child__lvtwo-story off">
+                  <ul>
+                    <li>LEXUS ELECTRIFIED</li>
+                    <li>LEXUS LS</li>
+                    <li>BRAND PHILOSOPHY</li>
+                    <li>20th BRAND STORY</li>
+                  </ul>
+                </div>
+                <div id="#design" class="item__child child__lvtwo-item child__lvtwo-story off">
+                  <ul>
+                    <li>LEXUS DESIGN <br>AWARD 2022</li>
+                    <li>LEXUS DESIGN <br>AWARD 2021</li>
+                    <li>LEXUS DESIGN <br>AWARD 2020</li>
+                  </ul>
+                </div>
+                <div id="#creative" class="item__child child__lvtwo-item child__lvtwo-story off">
+                  <ul>
+                    <li>LEXUS CREATIVE <br>MASTERS 2023</li>
+                    <li>LEXUS CREATIVE <br>MASTERS 2022</li>
+                    <li>LEXUS CREATIVE <br>MASTERS 2021</li>
+                  </ul>
+                </div>
+              </div>
             </div>
             <div class="utils__submenu">
               <ul class="utils__submenu-list">
@@ -155,6 +210,9 @@
             </li>
           </ul>
         </div>
+      </div>
+      <div class="overlay">
+
       </div>
     </header>
     <!-- //Header -->
