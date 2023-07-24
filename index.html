@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>LEXUS</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 
@@ -19,7 +20,7 @@
         </a>
       </h1>
       <div class="header__wrap">
-        <div class="header__menu">
+        <nav class="header__menu">
           <ul class="header__menu-list">
             <li data-id="#model" class="header__menu-item on">model</li>
             <li data-id="#buy" class="header__menu-item on">buy</li>
@@ -40,10 +41,30 @@
               </ul>
               <div class="child__lvtwo off">
                 <div id="#ls" class="item__child child__lvtwo-item child__lvtwo-ls off">
-                  <ul>
-                    <li><span>LS 500h</span></li>
-                    <li><span>LS 500</span></li>
+                  <ul class="child__lvtwo-list">
+                    <li data-id="#ls500h"><span>LS 500h</span></li>
+                    <li data-id="#ls500"><span>LS 500</span></li>
                   </ul>
+                  <div class="child__lvthree off">
+                    <div id="#ls500h" class="child__lvthree-item child__lvthree-ls500h off">
+                      <div class="child__lvthree-wrap">
+                        <div class="child__lvthree-image child__ls500h--image">
+                          <!-- <img src="img/" class="child__lvthree-img" alt=""> -->
+                        </div>
+                        <div class="child__lvthree-title"></div>
+                        <div class="child__lvthree-content"></div>
+                      </div>
+                    </div>
+                    <div id="#ls500" class="child__lvthree-item child__lvthree-ls500h off">
+                      <div class="child__lvthree-wrap">
+                        <div class="child__lvthree-image child__ls500--image">
+                          <!-- <img src="img/" class="child__lvthree-img" alt=""> -->
+                        </div>
+                        <div class="child__lvthree-title"></div>
+                        <div class="child__lvthree-content"></div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 <div id="#es" class="item__child child__lvtwo-item child__lvtwo-es off">
                   <ul>
@@ -199,7 +220,7 @@
               </ul>
             </div>
           </div>
-        </div>
+        </nav>
         <div class="header__quickmenu">
           <ul class="header__quickmenu-list">
             <li class="header__quickmenu-item">
@@ -222,7 +243,47 @@
 
       <!--Kv Section-->
       <section class="kv">
-
+        <div class="kv__slider">
+          <!-- Swiper -->
+          <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide kv__slider-item">
+                <img src="img/bg_pc_RZ_model_kv2.jpg" alt="">
+                <div class="kv__slider-title">
+                  <div class="kv__title">
+                    <h2 class="kv__title-content kv__title-content--rx">rx</h2>
+                  </div>
+                  <div class="kv__desc">
+                    <h3 class="kv__desc-title kv__desc-title--rx">하나의 모델, 세 가지 전동화 선택지</h3>
+                    <p class="kv__desc-content kv__desc-content--rx">LEXUS LIFE SIGNATURE, NEW GENERATION RX</p>
+                    <div class="kv__desc-btn">
+                      <a href="" class="kv__desc-link kv__desc-link--rx">모델정보</a>
+                      <a href="" class="kv__desc-link kv__desc-link--rx">시승신청</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide kv__slider-item">
+                <img src="img/bg_pc_RZ_model_kv1.jpg" alt="">
+                <div class="kv__slider-title">
+                  <div class="kv__title">
+                    <h2 class="kv__title-content kv__title-content--rz">rz</h2>
+                  </div>
+                  <div class="kv__desc">
+                    <h3 class="kv__desc-title kv__desc-title--rz">렉서스 최초의 전기차 전용 모델</h3>
+                    <p class="kv__desc-content kv__desc-content--rz">THE ALL NEW ELECTRIC LEXUS RZ 450e</p>
+                    <div class="kv__desc-btn">
+                      <a href="" class="kv__desc-link kv__desc-link--rz">모델정보</a>
+                      <a href="" class="kv__desc-link kv__desc-link--rz">시승신청</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <!-- //Swiper -->
+        </div>
       </section>
       <!--//Kv Section-->
 
@@ -270,6 +331,23 @@
     </div>
     <!-- //Footer -->
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 30,
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script>
 
   <script src="script.js"></script>
 </body>
