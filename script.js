@@ -9,7 +9,7 @@ $(document).ready(function () {
   const isClose = $(".btn__close")
 
 
-  // const itemChildLvThree = $(".child__lvtwo-list ul li");
+  // const itemChildLvThree = $(".lvtwo__list ul li");
 
   menuItems.hover(function () {
     menuItems.removeClass("on blur");

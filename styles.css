@@ -224,12 +224,12 @@ table {
 /* // variable css */
 
 /*<!-- general -->*/
-.is_show {
+/* .is_show {
   display: block;
 }
 .off {
   display: none;
-}
+} */
 .on {
   opacity: 1;
 }
@@ -449,6 +449,9 @@ table {
   opacity: 1;
   transform: translateZ(0);
 }
+.lvtwo__list li span{
+  width: 100%;
+} 
 /* .child__lvtwo-benefit ul li {
   color: var(--txt-grey);
   font-family: SDGothicNeoR-Regular;
@@ -638,7 +641,7 @@ table {
 }
 
 .kv__desc-title {
-  font-family: SDGothicNeoSB-SemiBold;
+  /* font-family: SDGothicNeoSB-SemiBold; */
   font-size: 40px;
   margin-top: 28px;
 }
