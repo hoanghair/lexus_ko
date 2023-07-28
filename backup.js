@@ -8,10 +8,6 @@ $(document).ready(function () {
   const childsLv3 = $(".child__lvthree");
   const isClose = $(".btn__close")
 
-  $(childsLv2).hide();
-  
-  // const itemChildLvThree = $(".child__lvtwo-list ul li");
-
   menuItems.hover(function () {
     menuItems.removeClass("on blur");
     $(this).addClass("on");
@@ -20,61 +16,38 @@ $(document).ready(function () {
   });
 
   $(listItemChild).hide();
-
-
   function onView(e) {
     e.preventDefault();
     const targetIdNav = $(this).data("id");
-    // const itemChild = $(".item__child");
-    // const listItemChild = $(".header__menu-child");
-
-    // $(listItemChild).removeClass("off").addClass("is_show");
-    // $(itemChild).removeClass("is_show").addClass("off");
-
-    $(listItemChild).show();
-    // $(itemChild).show();
+    
     $(itemChild).hide();
-
-    $(itemChild).each(function () {
+    
+    $(itemChild).each(function() {
       const targetIdChild = $(this).attr("id");
       if (targetIdNav === targetIdChild) {
-        // $(this).addClass("is_show").removeClass("off");
-        console.log(targetIdChild);
-        // $(`.${itemChild}`).css('display', 'none');
-        $(targetIdChild).show();
-        $('.item__child').hide()
-        
-
-        $(`#${targetIdChild}`).show();
+        $(this).show();
+        $(listItemChild).show();
         $("body").css("overflow", "hidden");
       }
-      if ($(itemChild).show()) {
+      if ($(itemChild).is(":visible")) {
         $(listItemChild).css("transform", "translateX(0)");
       }
     });
   }
 
+  $(childsLv2).hide();
   function onViewLvTwo(e) {
     e.preventDefault();
     const targetIdNavLv2 = $(this).data("id");
     const itemChildLv2 = $(".child__lvtwo-item");
-    // const childsLv2 = $(".child__lvtwo");
 
     $(itemChildList).removeClass("is-on");
     $(this).addClass("is-on");
-
-    // $(childsLv2).removeClass("is_show").addClass("off");
-    // $(itemChildLv2).removeClass("is_show").addClass("off");
-    // $(childsLv2).hide();
     $(itemChildLv2).hide();
-
 
     $(itemChildLv2).each(function () {
       const targetIdChild2 = $(this).attr("id");
       if (targetIdNavLv2 === targetIdChild2) {
-        // $(childsLv2).addClass("is_show").removeClass("off");
-        // $(this).addClass("is_show").removeClass("off");
-
         $(childsLv2).show();
         $(this).show();
         $("body").css("overflow", "hidden");
@@ -83,20 +56,10 @@ $(document).ready(function () {
   }
 
   $(childsLv3).hide();
-
   function onViewLvThree(e) {
     e.preventDefault();
     const targetIdNavLv3 = $(this).data("id");
-    console.log(targetIdNavLv3);
-
-    // const childsLv3 = $(".child__lvthree");
     const itemChildLv3 = $(".child__lvthree-item");
-
-    // $(itemChildList).removeClass("is-on");
-    // $(this).addClass("is-on");
-
-    // $(childsLv3).removeClass("is_show").addClass("off");
-    // $(itemChildLv3).removeClass("is_show").addClass("off");
 
     $(itemChildLv3).hide();
 
@@ -104,12 +67,8 @@ $(document).ready(function () {
       const targetIdChild3 = $(this).attr("id");
       console.log(targetIdChild3);
       if (targetIdNavLv3 === targetIdChild3) {
-        // $(childsLv3).addClass("is_show").removeClass("off");
-        // $(this).addClass("is_show").removeClass("off");
-
         $(childsLv3).show(); 
         $(this).show();
-
         $("body").css("overflow", "hidden");
       }
     });
@@ -119,23 +78,20 @@ $(document).ready(function () {
     e.preventDefault();
     $(itemChildLvtwo).removeClass("is-active");
     $(this).addClass("is-active");
-    // $(itemChildList).not(this).addClass("blur");
   }
+
   function closeNav(e) {
     e.preventDefault();
-    // $(listItemChild).addClass("off");
     $(listItemChild).css("transform", "translateX(-1000%)");
     $(".overlay").hide();
-
     $(menuItems).removeClass("on blur");
     $(menuItems).addClass("on");
-    $(itemChild).removeClass("is_show").addClass("off");
+    $(itemChild).hide();
     $(itemChildList).removeClass("is-on");
     $(itemChildLvtwo).removeClass("is-active");
-    $(childsLv2).removeClass("is_show").addClass("off");
-    $(childsLv3).removeClass("is_show").addClass("off");
+    $(childsLv2).hide();
+    $(childsLv3).hide();
     $("body").css("overflow", "auto");
-
   }
 
   $(menuItems).hover(onView);
