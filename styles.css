@@ -253,7 +253,7 @@ table {
   height: 100vh;
   width: 100%;
 }
-.btn__close{
+.btn__close {
   display: inline-block;
   position: absolute;
   cursor: pointer;
@@ -263,9 +263,9 @@ table {
   height: 30px;
   opacity: 1;
   transition: all 0.2s ease;
-  background: url(img/icon/btn_close_w.svg)  no-repeat center/cover;
+  background: url(img/icon/btn_close_w.svg) no-repeat center/cover;
 }
-.btn__close:hover{
+.btn__close:hover {
   opacity: 0.5;
 }
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -357,8 +357,9 @@ table {
 }
 .item__child ul li {
   position: relative;
-  margin: 30px 0;
-  cursor: pointer;
+  /* margin: 30px 0; */
+  padding: 15px 0px;
+  /* cursor: pointer; */
   font-size: 21px;
   line-height: 24px;
   font-family: NobelBook-Regular, SDGothicNeoR-Regular;
@@ -383,6 +384,11 @@ table {
   right: 0;
   transform: translate3d(-10px, 0, 0);
   transition: opacity 0.1s, transform 0.1s;
+}
+.item__child-list li span {
+  display: block;
+  cursor: pointer;
+  width: 100%;
 }
 /* .item__child ul li:hover {
   font-family: NobelB-Bold, SDGothicNeoB-Bold;
@@ -449,9 +455,10 @@ table {
   opacity: 1;
   transform: translateZ(0);
 }
-.lvtwo__list li span{
+.lvtwo__list li span {
   width: 100%;
-} 
+  cursor: pointer;
+}
 /* .child__lvtwo-benefit ul li {
   color: var(--txt-grey);
   font-family: SDGothicNeoR-Regular;
@@ -506,8 +513,7 @@ table {
   }
 }
 
-
-.child__lvthree-wrap{
+.child__lvthree-wrap {
   position: relative;
 }
 .child__lvthree-image {
@@ -520,43 +526,43 @@ table {
 .child__ls500--image {
   background: url(img/bg_pc_ls500.jpg) no-repeat center/cover;
 }
-.child__lvthree-title{
+.child__lvthree-title {
   position: absolute;
   top: 90px;
   left: 60px;
   z-index: 99;
-} 
-.child__lvthree-title h2{
+}
+.child__lvthree-title h2 {
   font-family: NobelBook-Regular;
   font-size: 47px;
   margin-bottom: 20px;
 }
-.child__lvthree-title span{
-  font-family: NobelBook-Regular,SDGothicNeoR-Regular;
+.child__lvthree-title span {
+  font-family: NobelBook-Regular, SDGothicNeoR-Regular;
   font-size: 25px;
 }
-.child__lvthree-content{
+.child__lvthree-content {
   position: absolute;
   bottom: 70px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
 }
-.lvthree__content-list{
+.lvthree__content-list {
   display: flex;
 }
-.lvthree__content-item{
+.lvthree__content-item {
   color: var(--txt-white);
   margin: 0 38px 0;
 }
-.lvthree__content-item dt{
-  font-family: NobelBook-Regular,SDGothicNeoR-Regular;
+.lvthree__content-item dt {
+  font-family: NobelBook-Regular, SDGothicNeoR-Regular;
   font-size: 20px;
   text-align: center;
 }
-.lvthree__content-item span{
+.lvthree__content-item span {
   display: block;
-  font-family: NobelBook-Regular,SDGothicNeoR-Regular;
+  font-family: NobelBook-Regular, SDGothicNeoR-Regular;
   font-size: 28px;
   text-align: center;
 }

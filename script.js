@@ -6,8 +6,7 @@ $(document).ready(function () {
   const itemChild = $(".item__child");
   const childsLv2 = $(".child__lvtwo");
   const childsLv3 = $(".child__lvthree");
-  const isClose = $(".btn__close")
-
+  const isClose = $(".btn__close");
 
   // const itemChildLvThree = $(".lvtwo__list ul li");
 
@@ -90,7 +89,7 @@ $(document).ready(function () {
 
   function itemActive(e) {
     e.preventDefault();
-    $(itemChildLvtwo).removeClass("is-active");
+    // $(itemChildLvtwo).removeClass("is-active");
     $(this).addClass("is-active");
     // $(itemChildList).not(this).addClass("blur");
   }
@@ -108,7 +107,6 @@ $(document).ready(function () {
     $(childsLv2).removeClass("is_show").addClass("off");
     $(childsLv3).removeClass("is_show").addClass("off");
     $("body").css("overflow", "auto");
-
   }
 
   $(menuItems).hover(onView);

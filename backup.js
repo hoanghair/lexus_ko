@@ -6,7 +6,7 @@ $(document).ready(function () {
   const itemChild = $(".item__child");
   const childsLv2 = $(".child__lvtwo");
   const childsLv3 = $(".child__lvthree");
-  const isClose = $(".btn__close")
+  const isClose = $(".btn__close");
 
   menuItems.hover(function () {
     menuItems.removeClass("on blur");
@@ -19,10 +19,10 @@ $(document).ready(function () {
   function onView(e) {
     e.preventDefault();
     const targetIdNav = $(this).data("id");
-    
+
     $(itemChild).hide();
-    
-    $(itemChild).each(function() {
+
+    $(itemChild).each(function () {
       const targetIdChild = $(this).attr("id");
       if (targetIdNav === targetIdChild) {
         $(this).show();
@@ -65,9 +65,9 @@ $(document).ready(function () {
 
     $(itemChildLv3).each(function () {
       const targetIdChild3 = $(this).attr("id");
-      console.log(targetIdChild3);
+      // console.log(targetIdChild3);
       if (targetIdNavLv3 === targetIdChild3) {
-        $(childsLv3).show(); 
+        $(childsLv3).show();
         $(this).show();
         $("body").css("overflow", "hidden");
       }
@@ -75,9 +75,12 @@ $(document).ready(function () {
   }
 
   function itemActive(e) {
-    e.preventDefault();
+    // e.preventDefault();
+    e.stopPropagation();
+
     $(itemChildLvtwo).removeClass("is-active");
     $(this).addClass("is-active");
+    console.log({ e: e.target });
   }
 
   function closeNav(e) {
